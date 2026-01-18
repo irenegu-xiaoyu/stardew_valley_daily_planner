@@ -60,7 +60,7 @@ def get_farm_stats(file_path):
 # to use
 def get_today_game_data():
     game_data_file_path = find_latest_stardew_save()
-    print(f"Targeting save file: {game_data_file_path}")
+    # print(f"Targeting save file: {game_data_file_path}")
 
 
     # Try to load existing cache
@@ -70,7 +70,7 @@ def get_today_game_data():
             cache_data = json.load(f)
         
         if cache_data.get("timestamp") == current_save_time:
-            print("🚀 Using cached farm data...")
+            print(" 🚀 Using cached farm data...")
             return cache_data["data"]
         
 

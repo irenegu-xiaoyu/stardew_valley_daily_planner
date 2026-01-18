@@ -24,7 +24,7 @@ def load_gemini_config(path: Path) -> dict:
 
 CONFIG_PATH = Path(__file__).resolve().parent / "gemini_api_config.json"
 config = load_gemini_config(CONFIG_PATH)
-print(f"- Loaded model config: {config}")
+print(f" ✈️  Load LLM model config: {config}")
 
 client = genai.Client(api_key = config["api_key"])
 
@@ -35,7 +35,7 @@ collection = db.get_collection(name="stardew_wiki", embedding_function=embed_fn)
 # --- 2. Fetch Context ---
 def get_farm_status():
     farm_status = get_today_game_data()
-    print(f"- Current Farm Status: {farm_status}")
+    print(f" 🏡 Current Farm Status: {farm_status}")
     return farm_status
 
 def search_wiki(query: str):
@@ -91,16 +91,18 @@ def generate_daily_strategy():
     )   
 
     # Print the agent's internal reasoning steps 
+    """
     for part in response.candidates[0].content.parts:
         if hasattr(part, 'text') and part.text:
             print(f"🧠 THOUGHT: {part.text}")
         if part.function_call:
             print(f"🛠️ ACTION: {part.function_call.name}({part.function_call.args})")
+    """
         
     return response.text
 
 
 # --- 3. Execution ---
 strategy = generate_daily_strategy()
-print(f"🌟 JUNIMO STRATEGY FOR TODAY\n")
+print(f" 🌟 JUNIMO STRATEGY FOR TODAY\n")
 print(strategy)

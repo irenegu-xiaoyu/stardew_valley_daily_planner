@@ -1,27 +1,23 @@
 # An mutli-agent AI tool to strategize farming in Stardew Valley
 
-Example usage: python3 agent.py
+## How to use
 
-# Config your Gemini API key in gemini_api_config.json
+Config your Gemini API key in gemini_api_config.json \
+run ` python3 agent.py`
 
-- Loaded model config: {'api_key': '###', 'model': 'gemini-3-flash-preview'}
-  Targeting save file: /Users/xxx/.config/StardewValley/Saves/game_id/game_id
-  🚀 Using cached farm data...
+## Example output
 
-- Current Farm Status: {'farmer': 'Master Yi', 'money': 500, 'day': '1', 'season': 'spring', 'year': '1', 'dailyLuck': -0.093, 'weather': 'Sunny'}
-  🧠 THOUGHT: _Junimo squeak!_ Welcome to your first day in the valley, Master Yi! It's a beautiful sunny day to start your farm, even if the spirits are a bit grumpy today.
+```
+ ✈️  Load LLM model config: {'api_key': 'xxx', 'model': 'gemini-3-flash-preview'}
+ 🚀 Using cached farm data...
+ 🏡 Current Farm Status: {'farmer': 'Master Yi', 'money': 500, 'day': '1', 'season': 'spring', 'year': '1', 'dailyLuck': -0.093, 'weather': 'Sunny'}
+ 🌟 JUNIMO STRATEGY FOR TODAY
 
-**Daily Tasks:**
-
-1.  **Sow Your First Seeds:** Open the gift box in your house for 15 Parsnip Seeds. Clear a patch of land, hoe the soil, and plant them immediately. Don't forget to water them!
-2.  **Investment at Pierre's:** Head to Pierre's General Store with your 500g. I recommend buying **10 Potato Seeds** (50g each). Potatoes have a 25% chance to provide extra crops upon harvest, making them excellent for early-game gold.
-3.  **Forage for Energy:** Since your luck is low today (-0.093), stay away from the mines. Instead, head south to the Cindersap Forest (near Leah’s cabin) to look for **Spring Onions**. They are a free source of energy to help you clear more of your farm!
-    🌟 JUNIMO STRATEGY FOR TODAY
-
-_Junimo squeak!_ Welcome to your first day in the valley, Master Yi! It's a beautiful sunny day to start your farm, even if the spirits are a bit grumpy today.
+*Chirp chirp!* Welcome to your first day in Pelican Town, Master Yi! The sun is shining, the air is fresh, and your new life is just beginning. Even though the spirits are feeling a bit displeased today, there is plenty of work to do on the surface!
 
 **Daily Tasks:**
 
-1.  **Sow Your First Seeds:** Open the gift box in your house for 15 Parsnip Seeds. Clear a patch of land, hoe the soil, and plant them immediately. Don't forget to water them!
-2.  **Investment at Pierre's:** Head to Pierre's General Store with your 500g. I recommend buying **10 Potato Seeds** (50g each). Potatoes have a 25% chance to provide extra crops upon harvest, making them excellent for early-game gold.
-3.  **Forage for Energy:** Since your luck is low today (-0.093), stay away from the mines. Instead, head south to the Cindersap Forest (near Leah’s cabin) to look for **Spring Onions**. They are a free source of energy to help you clear more of your farm!
+1.  **Plant Your Gift:** Open the package in your house to find 15 **Parsnip Seeds**. Use your hoe to till 15 spots near your house, plant them, and water them immediately so they can start growing!
+2.  **Seed Shopping at Pierre's:** Head to the General Store in town with your 500g. I recommend buying **Potatoes**, as they have a chance to provide multiple crops per harvest, which is great for early profit and farming experience!
+3.  **Scavenge for Snacks:** Since your energy is low starting out, head south to the forest below your farm. Look for **Spring Onions** growing in the dirt near the sewer pipe—they are a free way to restore your energy so you can clear more land today!
+```
