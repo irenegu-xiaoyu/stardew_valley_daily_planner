@@ -19,7 +19,7 @@ WIKI_API = "https://stardewvalleywiki.com/mediawiki/api.php"
 def scrape_and_store(page_list):
 
     headers = {
-        'User-Agent': 'StardewValleyDailySchedulerBot/1.0 (Contact: guxy_98@outlook.com) Stardew Scholar Project'
+        'User-Agent': 'StardewValleyDailySchedulerBot/1.0 Stardew Scholar Project'
     }
 
     for page in page_list:
