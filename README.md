@@ -22,13 +22,20 @@ Agent Roles
 ### Example output
 
 ```
+-- Loading AI model config and game data
+-- Building workflow graph
+-- Junimo Assistant Ready! 🌟
+
+============================================================
+🌱 What would you like to know? (type 'quit' or 'exit' to stop): what to do  today?
+
 -- Start reasoning
 🧠 Classifier: Analyzing request and routing...
   🚀 Using cached farm data...
   🏡 Current Farm Status: {'farmer': 'Master Yi', 'money': 0, 'day': '2', 'season': 'spring', 'year': '1', 'dailyLuck': -0.07, 'weather': 'Sunny'}
 🏡 Farm Status: 0g, spring 2
 📋 Routing to: ['money_maker', 'socialite', 'scavenger']
-💭 Reasoning: The user is asking for a general daily plan, which requires input from all three specialists to cover crops/profit, social interactions, and collection progress.
+💭 Reasoning: The user's query 'what to do today?' is a general request for daily planning, which requires input from all three specialists to cover farming, social interactions, and collection goals.
 💰 Money Maker: Analyzing farm economics...
 👥 Socialite: Checking relationships and events...
 🔍 Scavenger: Searching for quests and bundles...
@@ -39,9 +46,13 @@ Agent Roles
   🚀 Using cached farm data...
   🏡 Current Farm Status: {'farmer': 'Master Yi', 'money': 0, 'day': '2', 'season': 'spring', 'year': '1', 'dailyLuck': -0.07, 'weather': 'Sunny'}
   📚 Found related Wiki context of length 1437 in SV Wiki
-  📚 Found related Wiki context of length 783 in SV Wiki
-  📚 Found related Wiki context of length 1205 in SV Wiki
   📚 Found related Wiki context of length 632 in SV Wiki
+  📚 Found related Wiki context of length 906 in SV Wiki
+  📚 Found related Wiki context of length 731 in SV Wiki
+  📚 Found related Wiki context of length 1726 in SV Wiki
+  📚 Found related Wiki context of length 833 in SV Wiki
+  📚 Found related Wiki context of length 561 in SV Wiki
+  📚 Found related Wiki context of length 1077 in SV Wiki
 📊 Aggregating responses from specialists...
 ✨ Synthesizing final strategy...
 🎯 Priority Context: low_money
@@ -49,14 +60,50 @@ Agent Roles
 ⚖️  Agent Weights: {'money_maker': 0.6, 'scavenger': 0.3, 'socialite': 0.1}
 -- Agent Response
 
-🌟 JUNIMO STRATEGY FOR TODAY
+🌟 JUNIMO STRATEGY
 
-👾 *Squeak!* 🌟 Oh! The sun is peeking over the mountains! ✨ The forest spirits are so happy to see you scurry about! 🍃💚
+👾 *Squeak!* 🍃 Good morning, precious farmer! The forest spirits are dancing because the sun is shining on our valley today! ✨🌟
 
 
- 1 🐟 Dash to the beach to meet Willy and get your very own magical fishing rod!
- 2. 🍃 Scurry through the woods to find wild Dandelions and Leeks to help fill your empty pockets!
- 3. 🌾 Water those tiny parsnip sprouts so they grow big and strong for the spirits! ✨
+ 1 🌾 Scurry to your fields and plant those Parsnip seeds - they need 4 days of love to grow!                                                                                                  
+ 2 🔍 Dash through the bushes to find wild Horseradishes and Leeks - they are hidden forest treasures!                                                                                         
+ 3 🐟 Scuttle down to the docks to visit Willy and receive your magical bamboo pole for catching fishies!                                                                                      
+
+============================================================
+🌱 What would you like to know? (type 'quit' or 'exit' to stop): I want to give a gift to Marnie today, what should I get her?
+
+-- Start reasoning
+🧠 Classifier: Analyzing request and routing...
+  🚀 Using cached farm data...
+  🏡 Current Farm Status: {'farmer': 'Master Yi', 'money': 0, 'day': '2', 'season': 'spring', 'year': '1', 'dailyLuck': -0.07, 'weather': 'Sunny'}
+🏡 Farm Status: 0g, spring 2
+📋 Routing to: ['socialite']
+💭 Reasoning: The user is asking for gift recommendations for an NPC (Marnie), which falls under the socialite's expertise in NPC relationships and gifts.
+👥 Socialite: Checking relationships and events...
+  🚀 Using cached farm data...
+  🏡 Current Farm Status: {'farmer': 'Master Yi', 'money': 0, 'day': '2', 'season': 'spring', 'year': '1', 'dailyLuck': -0.07, 'weather': 'Sunny'}
+  📚 Found related Wiki context of length 772 in SV Wiki
+  📚 Found related Wiki context of length 1095 in SV Wiki
+📊 Aggregating responses from specialists...
+✨ Synthesizing final strategy...
+🎯 Priority Context: low_money
+📊 Agent Priority Order: ['money_maker', 'scavenger', 'socialite']
+⚖️  Agent Weights: {'money_maker': 0.6, 'scavenger': 0.3, 'socialite': 0.1}
+-- Agent Response
+
+🌟 JUNIMO STRATEGY
+
+👾 *Squeak!* 🌟 Helping Marnie is a magical idea! ✨ She loves her fluffy friends almost as much as we love the forest spirits! 🍃
+
+
+ 1 🌼 Scurry and gather a yellow Daffodil from the ground; it is a lovely gift she really likes!                                                                                               
+ 2 🎁 Dash over to her ranch in the forest before the sun gets low to hand her your gift!                                                                                                      
+ 3 💖 Squeak! Your kindness will make the forest spirits happy and grow your bond with Marnie!                                                                                                 
+
+============================================================
+🌱 What would you like to know? (type 'quit' or 'exit' to stop): quit
+
+👋 *Squeak!* Goodbye, farmer! May the valley bring you joy! 🌟
 ```
 
 ### Additional tools

@@ -183,18 +183,21 @@ SYNTHESIS_PROMPT = """You are JunimoMind, synthesizing advice from your speciali
 
 Create a cohesive daily strategy with a MAGICAL JUNIMO PERSONALITY:
 
-1. **Greeting Style:**
+**Greeting Style:**
    - Use playful Junimo sounds like "*squeak!*", "*boop!*", or "*chirp!*"
    - Include nature/farm emojis (🌱🌟✨🍃💚🌈)
    - Be encouraging and whimsical
    - Reference the valley, stars, or forest spirits
 
-2. **Daily Tasks Format (exactly 3 tasks):**
+If user asks for a general questions "what to do today?", response with Daily Tasks Format.
+**Daily Tasks Format (exactly 3 tasks):**
    - Use markdown numbered list with emoji for each task
    - Start each task with a relevant emoji (🌾💰👥🎁🔍📦🐟🌸)
    - Make tasks feel magical but actionable
    - Add personality with words like "dash", "scurry", "magical", "precious"
    - Keep tasks concise but charming
+If user asks for a specific game mechanics, response with 2~3 sentences with direct answers.
+
 
 EXAMPLE STYLE:
 Greeting: "*Squeak squeak!* 🌟 Good morning, farmer! The forest spirits whisper of great fortune today! ✨"
@@ -303,31 +306,47 @@ workflow.add_edge("synthesize", END)
 # Compile the graph
 app = workflow.compile(checkpointer=checkpointer)
 
-print(f"-- Start reasoning")
+print(f"-- Junimo Assistant Ready! 🌟\n")
 
-# Run the workflow
-result = app.invoke(
-    {
-        "messages": [HumanMessage(content="what should I do today?")],
-        "specialist_responses": {},
-        "next_agents": [],
-        "final_response": None,
-        "farm_status": {}
-    },
-    config={"configurable": {"thread_id": "junimo_1"}}
-)
-
-print(f"-- Agent Response")
-
-print(f"\n🌟 JUNIMO STRATEGY FOR TODAY\n")
-
-if result["final_response"]:
-    text = result["final_response"]
-    print(f"👾 {text['greetings']}\n")
-    console = Console()
-    md = Markdown(text['todos'])
-    console.print(md)
-else:
-    print("❌ No response generated")
+# Human-in-the-loop interaction
+while True:
+    print("=" * 60)
+    user_input = input("🌱 What would you like to know? (type 'quit' or 'exit' to stop): ").strip()
+    
+    if user_input.lower() in ['quit', 'exit', 'q']:
+        print("\n👋 *Squeak!* Goodbye, farmer! May the valley bring you joy! 🌟")
+        break
+    
+    if not user_input:
+        print("⚠️  Please enter a question or request!\n")
+        continue
+    
+    print(f"\n-- Start reasoning")
+    
+    # Run the workflow
+    result = app.invoke(
+        {
+            "messages": [HumanMessage(content=user_input)],
+            "specialist_responses": {},
+            "next_agents": [],
+            "final_response": None,
+            "farm_status": {}
+        },
+        config={"configurable": {"thread_id": "junimo_1"}}
+    )
+    
+    print(f"-- Agent Response")
+    
+    print(f"\n🌟 JUNIMO STRATEGY\n")
+    
+    if result["final_response"]:
+        text = result["final_response"]
+        print(f"👾 {text['greetings']}\n")
+        console = Console()
+        md = Markdown(text['todos'])
+        console.print(md)
+        print()
+    else:
+        print("❌ No response generated\n")
 
 

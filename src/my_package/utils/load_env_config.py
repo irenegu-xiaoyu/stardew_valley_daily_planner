@@ -16,6 +16,6 @@ def load_env_config() -> dict:
         )
     
     config = {"api_key": api_key, "model": model}
-    print(f" ✈️  Load LLM model config: {config}")
+    print(f" ✈️  Loaded LLM model config")
     return config
 
