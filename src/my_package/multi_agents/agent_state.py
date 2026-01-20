@@ -1,8 +1,9 @@
-from typing import Annotated, Sequence, TypedDict
-from langchain_core.messages import BaseMessage
-import operator
+from typing import TypedDict
 
 class AgentState(TypedDict):
-    # This 'reducer' (operator.add) lets messages pile up instead of overwriting
-    messages: Annotated[Sequence[BaseMessage], operator.add]
-    next: str  # Tracks which agent should speak next
+    """State that tracks the workflow"""
+    messages: list
+    farm_status: dict
+    specialist_responses: dict
+    next_agents: list[str]
+    final_response: dict | None

@@ -3,4 +3,5 @@ stardew_env/
 __pycache__/
 *.pyc
 .vscode/
-gemini_api_config.json
+.env
+.env.local

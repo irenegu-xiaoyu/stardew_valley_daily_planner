@@ -1,3 +1,12 @@
 Metadata-Version: 2.4
 Name: my_package
 Version: 0.1.0
+Requires-Dist: langchain>=1.2.0
+Requires-Dist: langchain-google-genai>=4.2.0
+Requires-Dist: langchain-core>=1.2.0
+Requires-Dist: langgraph>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: chromadb>=1.4.0
+Requires-Dist: requests>=2.32.0
+Requires-Dist: sentence-transformers>=5.0.0

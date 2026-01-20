@@ -1,7 +1,7 @@
 from google import genai
 from google.genai import types
 import chromadb
-from my_package.utils.load_gemini_config import load_gemini_config
+from my_package.utils.load_env_config import load_gemini_config
 from chromadb.utils import embedding_functions
 from my_package.utils.game_data_parser import get_today_game_data
 
